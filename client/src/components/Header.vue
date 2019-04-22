@@ -9,7 +9,7 @@
         flat
         dark
         >
-        <router-link to="songs">Browse</router-link>
+        <router-link to="/songs">Browse</router-link>
       </v-btn>
     </v-toolbar-items>
 
@@ -20,14 +20,14 @@
         flat
         dark
         v-if="!$store.state.isUserLoggedIn">
-        <router-link to="login">Login</router-link>
+        <router-link to="/login">Login</router-link>
       </v-btn>
 
       <v-btn
         flat
         dark
         v-if="!$store.state.isUserLoggedIn">
-        <router-link to="register">Sign Up</router-link>
+        <router-link to="/register">Sign Up</router-link>
       </v-btn>
 
       <v-btn
