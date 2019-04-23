@@ -20,14 +20,18 @@
           v-for="song in songs"
           :key="song.id"
         >
-        <v-layout>
+        <v-layout class="mt-4">
           <v-flex xs6>
             <span class="headline">{{ song.title }}</span><br>
             <span class="grey--text">{{ song.artist }}</span><br>
             <span>{{ song.genre }}</span><br>
           </v-flex>
           <v-flex xs6>
-            <img  class="album-image" :src="song.albumImageUrl" />
+            <v-img
+              :src="song.albumImageUrl"
+              aspect-ratio="1"
+              class="grey lighten-2"
+            />
           </v-flex>
           <v-btn
             class="cyan"
