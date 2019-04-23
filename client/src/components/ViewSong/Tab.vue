@@ -1,20 +1,20 @@
 <template>
-  <v-layout>
-    <v-flex xs6 offset-xs3>
-      <panel title="View Song">
-      </panel>
-    </v-flex>
-  </v-layout>
+    <panel title="Tab">
+    <v-layout>
+        <v-flex xs6>
+           <pre>{{ tab }}</pre>
+        </v-flex>
+    </v-layout>
+    </panel>
 </template>
 
 <script>
 import Panel from '@/components/Panel'
 
 export default {
-  data () {
-    return {
-    }
-  },
+  props: [
+    'tab'
+  ],
   components: {
     Panel
   }
