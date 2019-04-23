@@ -17,8 +17,15 @@
         <br>
         <v-btn
             class="cyan"
-            :to="{ name: 'song-edit', params: { songId: song.id }}"
-          >
+            :to="{
+              name: 'song-edit',
+              params () {
+                return {
+                  songId: song.id
+                }
+              }
+            }"
+        >
             Edit
           </v-btn>
       </v-flex>
@@ -27,15 +34,10 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
-
 export default {
   props: [
     'song'
-  ],
-  components: {
-    Panel
-  }
+  ]
 }
 </script>
 
